@@ -16,6 +16,9 @@ const App = () => {
     start();
     setIsCopied("Copy");
   };
+  const stopListening = () => {
+    SpeechRecognition.stopListening();
+  };
 
   if (!browserSupportsSpeechRecognition) {
     return null;
@@ -29,21 +32,19 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <h2>Speech to Text Converter</h2>
-        <br />
+        <h2>Vocal Transcriber</h2>
         <p>
-          A React hook that converts speech from the microphone to text and
-          makes it available to your React components.
+          This website converts spoken words to written text. It offers an
+          easy-to-use interface and accurate transcription results. Ideal for
+          transcribing lectures, interviews, and other audio content.
         </p>
 
-        <div className="main-content">{transcript}</div>
+        <div className="text_conatiner">{transcript}</div>
 
         <div className="btn-style">
           <button onClick={copytext}>{iscopied}</button>
-          <button onClick={startListening}>Start Listening</button>
-          <button onClick={SpeechRecognition.stopListening}>
-            Stop Listening
-          </button>
+          <button onClick={startListening}>Start</button>
+          <button onClick={stopListening}>Stop</button>
           <button onClick={resetTranscript}>Clear</button>
         </div>
       </div>
