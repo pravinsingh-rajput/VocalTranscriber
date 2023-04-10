@@ -90,6 +90,5 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     justify-items: center;
-    border: 1px solid greenyellow;
   }
 } ;
