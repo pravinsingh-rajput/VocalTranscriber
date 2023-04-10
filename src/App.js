@@ -39,13 +39,14 @@ const App = () => {
           transcribing lectures, interviews, and other audio content.
         </p>
 
-        <div className="text_conatiner">{transcript}</div>
-
-        <div className="btn-style">
-          <button onClick={copytext}>{iscopied}</button>
-          <button onClick={startListening}>Start</button>
-          <button onClick={stopListening}>Stop</button>
-          <button onClick={resetTranscript}>Clear</button>
+        <div className="text_conatiner">
+          <div className="voice-text">{transcript}</div>
+          <div className="btn-style">
+            <button onClick={startListening}>Start</button>
+            <button onClick={stopListening}>Stop</button>
+            <button onClick={copytext}>{iscopied}</button>
+            <button onClick={resetTranscript}>Clear</button>
+          </div>
         </div>
       </div>
     </>

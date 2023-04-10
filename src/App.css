@@ -22,7 +22,6 @@ p {
 }
 
 .text_conatiner {
-  border: 2px sloid red;
   box-shadow: 2px 2px 10px -1px black;
   margin: 10px 25px;
   background-color: #ffff;
@@ -39,22 +38,39 @@ p {
   border-radius: 12px;
 }
 
+.voice-text {
+  min-height: 400px;
+  background-color: transparent;
+  text-align: left;
+  max-height: 90%;
+}
+
+.btn-style {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center;
+  border: 1px solid greenyellow;
+}
+
 button {
-  padding: 12px 25px;
+  padding: 8px 35px;
   margin: 5px 15px;
   border: none;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   border-radius: 5px;
   background-color: #35bdd0;
   transition: all 0.5s ease-out;
   cursor: pointer;
+  width: 140px;
 }
 button:hover {
   background-color: #4dd637;
   color: #ffff;
 }
 
-@media Screen and (max-width: 458px) {
+@media Screen and (max-width: 428px) {
   h2 {
     font-size: 35px;
     margin: 5px 8px;
@@ -65,8 +81,16 @@ button:hover {
   }
 
   button {
-    padding: 8px 20px;
+    padding: 8px 25px;
     margin: 5px 8px;
-    font-weight: 500;
+    width: 120px;
+  }
+
+  .btn-style {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    justify-items: center;
+    border: 1px solid greenyellow;
   }
 } ;
